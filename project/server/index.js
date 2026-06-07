@@ -13,6 +13,7 @@ app.use('/api/alternatives', require('./routes/alternatives'));
 app.use('/api/criteria',     require('./routes/criteria'));
 app.use('/api/vectors',      require('./routes/vectors'));
 app.use('/api/results',      require('./routes/results'));
+app.use('/api/decisions',    require('./routes/decisions'));
 
 app.get('/api/health', (req, res) => res.json({ status: 'ok', message: 'СППР API працює!' }));
 

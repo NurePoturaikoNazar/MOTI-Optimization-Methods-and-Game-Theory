@@ -77,6 +77,17 @@ const initSchema = () =>
         FOREIGN KEY (LPR_id)         REFERENCES LPR(LPR_id)                 ON DELETE CASCADE,
         FOREIGN KEY (Alternative_id) REFERENCES Alternative(Alternative_id) ON DELETE CASCADE,
         CONSTRAINT UQ_LPR_Alternative UNIQUE (LPR_id, Alternative_id)
+      )`);
+
+      db.run(`CREATE TABLE IF NOT EXISTS Comparison_History (
+        history_id INTEGER PRIMARY KEY AUTOINCREMENT,
+        LPR_id     INTEGER NOT NULL,
+        Alt1_id    INTEGER NOT NULL,
+        Alt2_id    INTEGER NOT NULL,
+        Result     INTEGER NOT NULL CHECK (Result IN (-1, 0, 1)),
+        FOREIGN KEY (LPR_id)  REFERENCES LPR(LPR_id)                 ON DELETE CASCADE,
+        FOREIGN KEY (Alt1_id) REFERENCES Alternative(Alternative_id) ON DELETE CASCADE,
+        FOREIGN KEY (Alt2_id) REFERENCES Alternative(Alternative_id) ON DELETE CASCADE
       )`, resolve);
     });
   });

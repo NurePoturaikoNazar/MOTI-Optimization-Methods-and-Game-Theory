@@ -4,6 +4,7 @@ import AlternativesView from '../views/AlternativesView.vue'
 import CriteriaView     from '../views/CriteriaView.vue'
 import MatrixView       from '../views/MatrixView.vue'
 import ResultsView      from '../views/ResultsView.vue'
+import DecisionView     from '../views/DecisionView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -12,6 +13,7 @@ const router = createRouter({
     { path: '/alternatives',  name: 'alternatives', component: AlternativesView },
     { path: '/criteria',      name: 'criteria',     component: CriteriaView     },
     { path: '/matrix',        name: 'matrix',       component: MatrixView       },
+    { path: '/decision',      name: 'decision',     component: DecisionView     },
     { path: '/results',       name: 'results',      component: ResultsView      },
   ],
 })
