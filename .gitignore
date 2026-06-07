@@ -1,0 +1,34 @@
+# typst_nure_template
+typst_nure_template/
+
+# ignore generated pdfs, build artifacts, and temporary files
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+.typst-cache/
+
+# Ignore VS Code settings and workspace files
+.vscode/
+
+# Ignore node modules and build outputs
+node_modules/
+**/node_modules/
+/dist/
+**/dist/
+/build/
+**/build/
+
+# Ignore project runtime files
+project/server/database.sqlite-shm
+project/server/database.sqlite-wal
+project/server/*.log
+project/client/.vite
+
+# ignore system files
+.DS_Store
+Thumbs.db
+
+# info
+info/
