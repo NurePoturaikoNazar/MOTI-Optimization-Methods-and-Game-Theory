@@ -15,6 +15,7 @@ const router = createRouter({
     { path: '/matrix',        name: 'matrix',       component: MatrixView       },
     { path: '/decision',      name: 'decision',     component: DecisionView     },
     { path: '/results',       name: 'results',      component: ResultsView      },
+    { path: '/collective',    name: 'collective',   component: () => import('../views/CollectiveView.vue') },
   ],
 })
 
